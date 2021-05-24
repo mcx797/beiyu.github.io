@@ -35,7 +35,7 @@
 				bottom:0;
 				left:0;
 				right:0;
-				font-size:70;
+				font-size:60;
 				font-weight: bold;
 			}
 	.tabletext {
@@ -101,9 +101,12 @@
 			<text x = "125" y = "70" fill = "#019665" font-size = "35" font-weight = "bold">
 			此任务已处理,您无需任何操作
 			</text>
+			<path class = "pathArrow"></path>
 		</svg>
 		<script>
-			
+			d3.select("path.pathArrow")
+			  .attr("d", "M 20 50 L 50 20 L 53 23 L 28 48 L 78 48 L 78 52 L 28 52 L 53 77 L 50 80 L 20 50")
+			  .attr("fill", "white")
 		</script>
 		<svg class = "svg1">
 				<rect class = "rectA">
