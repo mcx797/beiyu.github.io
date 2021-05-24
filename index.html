@@ -8,13 +8,13 @@
 	</title>
 	<style>
 	table,table tr th, table tr td { border:1px solid #D8D8D8; }
-	table { width: 350px; min-height: 25px; line-height: 25px; text-align: center; border-color:#D8D8D8; border-collapse: collapse;}
+	table { width: 350px; min-height: 25px; line-height: 35px; text-align: center; border-color:#D8D8D8; border-collapse: collapse;}
 	.table_border{
 				border:1px solid #D8D8D8;
 				}
-	.backCG = {
-				bgcolor:#F2F2F2;
-				width: 150px;
+	.backCG {
+				background-color:#F2F2F2;
+				width: 100px;
 			}
 	
 	.value1 {	
@@ -29,15 +29,15 @@
 				margin-left:auto;
 				margin-right:auto;
 				position:absolute;
-				top:100;
+				top:200;
 				bottom:0;
 				left:0;
 				right:0;
 				font-size:30;
-				border:1px solid red;
+				font-weight: bold;
 			}
 	.tabletext {
-				top:200px;
+				top:300px;
 				left:15%;
 				width:70%;
 				height:500;
@@ -46,19 +46,90 @@
 				margin-right:auto;
 	}
 	.backA {
-				width : 100;
-				height : 100;
+				width : 40;
+				height : 50;
 				fill : #4CB050;
 	}
+	.rectA {
+				
+				width : 100%;
+				height: 60;
+				fill : #4CB050;
+				stroke-width: 2px;
+				stroke : rgb(200,199,201)
+
+	}
+	.svg1 {
+		position : absolute;
+		width : 100%; 
+		height : 80;
+		top : 53;
+	}
+	.svg2 {
+		position: fixed;
+		width : 100%;
+		height : 55;
+		background-color : white;
+		z-index : 99;
+	}
+	.bd {
+		margin: 0;
+	}
+	.leftT {
+		text-align :  left;
+	}
 	</style>
+
 </head>
  
-<body>
-		<svg>
+<body class = "bd">
+		<svg class = "svg2">
 			<rect class = "backA">
 			</rect>
+			<text x = "100" y = "30" fill = "#019665" font-size = "20">
+			此任务已处理，您无需任何操作
+			</text>
 		</svg>
+		<script>
+			
+		</script>
+		<svg class = "svg1">
+				<rect class = "rectA">
+				</rect>
+				<text x = "10%" y = "40" fill = "white" font-size = "20">
+					填写信息
+				</text>
+				<text x = "35%" y = "40" fill = "white" font-size = "20">
+					铺导员审批
+				</text>
+				<text x = "60%" y = "40" fill = "white" font-size = "20">
+					申请人确认
+				</text>
+				<text x = "85%" y = "40" fill = "white" font-size = "20">
+					完成
+				</text>
+				<path class = "pathL1"></path>
+				<path class = "pathL2"></path>
+				<path class = "pathL3"></path>
+			</svg>
 		
+	<script>
+		left = 160;
+		path1 = d3.select("path.pathL1")
+				  .attr("d", "M " + left + " 0 L " + (left + 3) +" 0 L " + (left + 22) + " 30 L " + (left + 3) + " 60 L " + left +" 60 L " + (left + 19) + " 30 L " + left + " 0")
+				  .attr("fill", "white")
+
+		left = 330;
+		path2 = d3.select("path.pathL2")
+				  .attr("d", "M " + left + " 0 L " + (left + 3) +" 0 L " + (left + 22) + " 30 L " + (left + 3) + " 60 L " + left +" 60 L " + (left + 19) + " 30 L " + left + " 0")
+				  .attr("fill", "white")
+
+		left = 480;
+		path3 = d3.select("path.pathL3")
+				  .attr("d", "M " + left + " 0 L " + (left + 3) +" 0 L " + (left + 22) + " 30 L " + (left + 3) + " 60 L " + left +" 60 L " + (left + 19) + " 30 L " + left + " 0")
+				  .attr("fill", "white")
+
+	</script>
 	<div class = "midText">
 		学生出入校备案申报
 	</div>
@@ -78,16 +149,52 @@
 		</tr>
 		<tr>
 		<td class = "backCG" style = "background-color:#F2F2F2">所在学部/学院</td>
-		<td class = "value1"></td>
+		<td class = "value1">汉语国际教育研究院</td>
 		</tr>
 		<tr>
 		<td class = "backCG" style = "background-color:#F2F2F2">性别</td>
-		<td class = "value1">201921198151</td>
+		<td class = "value1">男</td>
 		</tr>
 		<tr>
-		<td class = "backCG" style = "background-color:#F2F2F2">联系方式</td>
-		<td class = "value1">201921198151</td>
+		<td class = "backCG" style = "background-color:#F2F2F2">联系方式 <span style="color: red;font-weight:bold">*</span></td>
+		<td class = "value1">18754696357</td>
+		</tr>
+		<tr>
+		<td class = "backCG" style = "background-color:#F2F2F2">辅导员 <span style="color: red;font-weight:bold">*</span></td>
+		<td class = "value1">李姝姝</td>		
+		</tr>
+		<tr>
+		<td class = "backCG" style = "background-color:#F2F2F2">健康状况 <span style="color: red;font-weight:bold">*</span></td>
+		<td class = "value1 leftT">正常 不适</td>		
+		</tr>
+		<tr>
+		<td class = "backCG" style = "background-color:#F2F2F2">出入校类型 <span style="color: red;font-weight:bold">*</span></td>
+		<td class = "value1 leftT">临时出入校</td>
+		</tr>
+		<tr>
+		<td class = "backCG" style = "background-color:#F2F2F2">出校时间 <span style="color: red;font-weight:bold">*</span></td>
+		<td class = "value1">2021-05-24</td>
+		</tr>
+		<tr>
+		<td class = "backCG" style = "background-color:#F2F2F2">入校时间 <span style="color: red;font-weight:bold">*</span></td>
+		<td class = "value1">2021-05-24</td>
+		</tr>
+		<tr>
+		<td class = "backCG" style = "background-color:#F2F2F2">是否出京 <span style="color: red;font-weight:bold">*</span></td>
+		<td class = "value1 leftT" >是 否</td>
+		</tr>
+		<tr>
+		<td class = "backCG" style = "background-color:#F2F2F2">出入校事由</br>及出行轨迹<span style="color: red;font-weight:bold">*</span> </td>
+		<td class = "value1">购物</td>
+		</tr>
+		<tr>
+		<td class = "backCG" style = "background-color:#F2F2F2">相关附件 </td>
+		<td class = "value1"></td>
 		</tr>
 	</table>
 	</div>
+
+	<script>
+		
+	</script>
 </body>
