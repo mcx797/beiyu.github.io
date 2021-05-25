@@ -105,6 +105,7 @@
 		top:2350px;
 		border-top: 5px solid rgb(198, 198, 198);
 		border-bottom: 5px solid rgb(198, 198, 198);
+		color : rgb(6, 93, 162);
 	}
 	.bottomB {
 		background-color: rgb(243, 243, 243);
@@ -124,16 +125,46 @@
 		top:40;
 	}
 	.Bob {
-		width:100%;
+		width:80%;
 		height:50;
 		position:absolute;
+		left:10%;
 		top:40;
+		border-bottom:3px solid rgb(124, 124, 124);
+		font-size:30px;
 	}
 	.mySelf {
-		width:100%;
+		width:80%;
 		height:50;
 		position:absolute;
+		left:10%;
+		font-size:30px;
 		top:120;
+	}
+	.B1 {
+		width: 180px;
+		height:30px;
+		right:180px;
+		color:rgb(127, 127, 127);
+		position: absolute;
+	}
+	.B2 {
+		width:600px;
+		height:40px;
+		position:absolute
+	}
+	.B3 {
+		height:40px;
+		width:100%;
+		position:absolute
+	}
+	.B4{
+		width: 180px;
+		height:30px;
+		right:180px;
+		top:40;
+		color:rgb(127, 127, 127);
+		position: absolute;
 	}
 	</style>
 
@@ -292,26 +323,26 @@
 
 	<div class = "BottomA">
 		<div class = "Bob">
-			<div>
-				<font>Bob</font>
+			<div class = "B2">
+				<font size = "6">Bob</font>
 				<font>填写/办理了</font>
-				<font>抄送节点(</font>
-				<font>确认</font>
-				<font>)</font>
+				<font size = "6">抄送节点(</font>
+				<font color = "#049464" size = "6">确认</font>
+				<font size = "6">)</font>
 			</div>
-			<div>
+			<div class = "B1">
 				约1小时之前
 			</div>
 		</div>
 		<div class = "mySelf">
-			<div>
+			<div class = "B3">
 				<font>您(马常啸)</font>
 				<font>填写/办理了</font>
 				<font>填写信息(</font>
-				<font>提交</font>
+				<font color = "#049464">提交</font>
 				<font>)</font>
 			</div>
-			<div>
+			<div class = "B4">
 				约1小时之前
 			</div>  
 		</div>
