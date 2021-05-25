@@ -74,6 +74,12 @@
 		z-index : 99;
 		border-bottom: 3px solid rgb(198, 198, 198);
 	}
+	.svg3 {
+		position:absolute;
+		width:50;
+		height:50;
+		right:0;
+	}
 	.bd {
 		margin: 0;
 		background-color: rgb(242, 242, 242);
@@ -96,9 +102,38 @@
 		position: absolute;
 		width:100%;
 		height:200;
-		top:2100px;
+		top:2350px;
 		border-top: 5px solid rgb(198, 198, 198);
 		border-bottom: 5px solid rgb(198, 198, 198);
+	}
+	.bottomB {
+		background-color: rgb(243, 243, 243);
+		position: absolute;
+		width:100%;
+		height:160;
+		top:2600px;
+		border-top: 3px solid rgb(198, 198, 198);
+		font-size: 30;
+		text-align: center;
+		color:rgb(97, 97, 97);
+	}
+	.bottomC {
+		width:100%;
+		height:50;
+		position: absolute;
+		top:40;
+	}
+	.Bob {
+		width:100%;
+		height:50;
+		position:absolute;
+		top:40;
+	}
+	.mySelf {
+		width:100%;
+		height:50;
+		position:absolute;
+		top:120;
 	}
 	</style>
 
@@ -112,6 +147,9 @@
 			此任务已处理,您无需任何操作
 			</text>
 			<path class = "pathArrow"></path>
+			<circle cx = "900" cy = "38" r = "6" fill = "rgb(74, 74, 74)"></circle>
+			<circle cx = "900" cy = "58" r = "6" fill = "rgb(74, 74, 74)"></circle>
+			<circle cx = "900" cy = "78" r = "6" fill = "rgb(74, 74, 74)"></circle>
 		</svg>
 		<script>
 			d3.select("path.pathArrow")
@@ -251,15 +289,37 @@
 		</table>
 		</div>
 	</div>
-	<!--
-<div class = "BottomA">
+
+	<div class = "BottomA">
 		<div class = "Bob">
-			Bob 填写/办理了 抄送节点（确认）        约1小时之前
+			<div>
+				<font>Bob</font>
+				<font>填写/办理了</font>
+				<font>抄送节点(</font>
+				<font>确认</font>
+				<font>)</font>
+			</div>
+			<div>
+				约1小时之前
+			</div>
 		</div>
 		<div class = "mySelf">
-			您(马常啸) 填写/办理了 填写信息（提交）        约1小时之前
+			<div>
+				<font>您(马常啸)</font>
+				<font>填写/办理了</font>
+				<font>填写信息(</font>
+				<font>提交</font>
+				<font>)</font>
+			</div>
+			<div>
+				约1小时之前
+			</div>  
 		</div>
 	</div>
-	-->
-	
+
+	<div class = "bottomB">
+		<div class = "bottomC">
+			北京语言大学版权所有Copyright©2020
+		</div>
+	</div>
 </body>
